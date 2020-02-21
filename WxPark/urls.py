@@ -16,9 +16,13 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+from dtoken import views
+from user import views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^user/', include('user.urls')),
     url(r'^wx/', include('wx.urls')),
     url(r'^dtoken/', include('dtoken.urls')),
+    url(r'^', views.login),
 ]

@@ -6,6 +6,6 @@ from django.conf.urls import url
 from dtoken import views
 
 urlpatterns = [
-    # url(r'login', views.login),
-    url(r'tokens', views.tokens)
+    url(r'tokens', views.tokens),
+
 ]

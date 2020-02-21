@@ -1,7 +1,9 @@
 import json
 
-from django.http import JsonResponse
-from django.shortcuts import render
+from django.http import JsonResponse, HttpResponseRedirect
+from django.shortcuts import render, redirect
+
+
 from wx.models import UserProfile
 import jwt
 import time
@@ -16,6 +18,7 @@ def tokens(request):
         return JsonResponse(result)
 
     data = request.body
+
     json_obj = json.loads(data)
     username = json_obj.get('username')
     password = json_obj.get('passwd')
@@ -35,17 +38,20 @@ def tokens(request):
         result = {'code': 10203, 'error': 'username or password is wrong'}
         return JsonResponse(result)
     # 生成token
-    token = make_token(username)
-    result = {'code': '200', 'username': username, 'data': {'token': token.decode()}}
+    token = make_token(user.id)
+    result = {'code': '200', 'id': user.id, 'token': token.decode()}
     return JsonResponse(result)
 
 
-
-
-def make_token(username, expire=3600 * 24):
+def make_token(id, expire=3600 * 24):
     # 注册/登录成功后 签发token 默认一天有效期
 
     key = settings.JWT_TOKEN_KEY
     now = time.time()
-    payload = {'username': username, 'exp': now + expire}
+
+    payload = {'id': id, 'exp': now + expire}
     return jwt.encode(payload, key, algorithm='HS256')
+
+
+
+

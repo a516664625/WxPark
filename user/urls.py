@@ -4,7 +4,14 @@
 from django.conf.urls import url
 
 from user import views
+app_name = 'user'
+urlpatterns = [
+    url(r'^login$', views.login,name='login'),
+    url(r'^index$', views.adminIndex,name='index'),
+    url(r'^editpassword$', views.editpassword,name='edpassword'),
+    url(r'^logout$', views.logout,name='logout'),
+    url(r'^carday$',views.CarDay,name='carday'),
+    url(r'^carhistory$',views.CarHistory,name='carhistory'),
+    url(r'^carreal',views.CarReal,name='carreal'),
 
-urlpatterns=[
-    url(r'/',views.login),
 ]

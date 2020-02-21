@@ -7,6 +7,11 @@ from wx import views
 
 urlpatterns = [
     url(r'Wxlogin', views.Wxlogin),
+    url(r'wxre', views.wxre),
     url(r'getid', views.getid),
-    url(r'register', views.register)
+    url(r'reid', views.reid),
+    url(r'register', views.register),
+    url(r'addcar', views.addcar),
+    url(r'showcar', views.showcar),
+
 ]

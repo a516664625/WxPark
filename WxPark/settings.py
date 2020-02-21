@@ -113,12 +113,15 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 APPEND_SLASH = False
 JWT_TOKEN_KEY = '123456'
 WX_APP_ID = 'wx4c7fa5eb7edde7b6'
