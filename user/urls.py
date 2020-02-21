@@ -13,5 +13,19 @@ urlpatterns = [
     url(r'^carday$',views.CarDay,name='carday'),
     url(r'^carhistory$',views.CarHistory,name='carhistory'),
     url(r'^carreal',views.CarReal,name='carreal'),
+    #收费管理设定 http://127.0.0.1:8000/user/chargeStandard
+    url(r'^chargeStandard',views.ChargeStandard,name='chargeStandard'),
+    #设定是否启用http://127.0.0.1:8000/user/toEnable
+    url(r'^toEnable',views.toEnable,name='toEnable'),
+    #删除设定http://127.0.0.1:8000/user/delcs
+    url(r'^delcs',views.del_chargestandard,name='delcs'),
+    #增加收费标准http://127.0.0.1:8000/user/addcs
+    url(r'^addcs',views.add_chargestandard,name='addcs'),
+    #用户管理http://127.0.0.1:8000/user/userManage
+    url(r'^userManage',views.userManage,name='userManage'),
+    #删除用户http://127.0.0.1:8000/user/deluser
+    url(r'^deluser',views.DeleteUser,name='deluser'),
+
+
 
 ]

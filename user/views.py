@@ -1,11 +1,17 @@
 import datetime
+import json
+from django.http import HttpResponse
+
+from tools.logging_check import login_required
+
+from wx.models import UserProfile
 
 import arrow
 from django.db.models import Q
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from user.models import AdminProfile, NumberCar, Car
+from user.models import AdminProfile, NumberCar, Car, CS
 
 
 def login(request):
@@ -43,6 +49,7 @@ def login(request):
 
 
 # 管理员-首页
+@login_required
 def adminIndex(request):
     session_name = request.session.get('admin')  # 从session中获取管理员名字
     # 停车场内当日车辆数量
@@ -71,6 +78,7 @@ def adminIndex(request):
 
 
 # 修改密码
+@login_required
 def editpassword(request):
     if request.method == 'GET':
         return render(request, 'passwordEdit.html')
@@ -88,6 +96,7 @@ def editpassword(request):
 
 
 # 退出登录
+@login_required
 def logout(request):
     return redirect('user:login')
 
@@ -95,6 +104,7 @@ def logout(request):
 # 车辆管理
 
 # 当日车辆信息
+@login_required
 def CarDay(request):
     if request.method == 'GET':
         session_name = request.session.get('admin')
@@ -108,6 +118,7 @@ def CarDay(request):
 
 
 # 车辆历史查询
+@login_required
 def CarHistory(request):
     if request.method == 'GET':
         session_name = request.session.get('admin')
@@ -120,6 +131,7 @@ def CarHistory(request):
 
 
 # 实时车辆查询
+@login_required
 def CarReal(request):
     if request.method == 'GET':
         session_name = request.session.get('admin')
@@ -133,4 +145,93 @@ def CarReal(request):
             'realLists': ret,
             'session_name': session_name
         }
-        return render(request,'carReal.html',context)
+        return render(request, 'carReal.html', context)
+
+
+# 收费管理
+# 收费标准设定
+@login_required
+def ChargeStandard(request):
+    if request.method == 'GET':
+        session_name = request.session.get('admin')
+        ret = CS.objects.all()
+        ret1 = CS.objects.values('id', 'able')
+        print(ret1)
+        dict = {}
+        for i in ret1:
+            dict2 = {i['id']: i['able']}
+            dict.update(dict2)
+        context = {
+            'chargeStandardLists': ret,
+            'session_name': session_name,
+            'dict': json.dumps(dict)
+        }
+        return render(request, 'chargeStandard.html', context)
+
+
+# 是否启用收费标准
+@login_required
+def toEnable(request):
+    if request.method == 'POST':
+        cid = request.POST.get('e')
+        ables = request.POST.get('able')
+        # print(cid, ables)
+        if ables == '0':
+            CS.objects.filter(id=int(cid)).update(able=0)
+        if ables == '1':
+            CS.objects.filter(id=int(cid)).update(able=1)
+        return HttpResponse()
+    else:
+        return render(request, 'chargeStandard.html')
+
+
+# 删除收费标准
+@login_required
+def del_chargestandard(request):
+    if request.method == 'POST':
+        cid = request.POST.get('e')
+        CS.objects.filter(id=cid).delete()
+        return render(request, 'chargeStandard.html')
+
+
+# 增加收费标准
+@login_required
+def add_chargestandard(request):
+    if request.method == 'POST':
+        hourmoney = request.POST.get('hourMoney')
+        print(hourmoney)
+        sixmoney = request.POST.get('sixMoney')
+        aftermoney = request.POST.get('afterMoney')
+        ret = CS.objects.create(hour_money=hourmoney, six_money=sixmoney, after_money=aftermoney, able=0)
+        if ret != None:
+            return redirect('user:chargeStandard')
+        else:
+            return render(request, 'chargeStandard.html')
+
+
+# 用户管理
+@login_required
+def userManage(request):
+    if request.method == 'GET':
+        session_name = request.session.get('admin')
+        ret = UserProfile.objects.all()
+        context = {
+            'users': ret,
+            'session_name': session_name
+
+        }
+        return render(request, 'userManage.html', context)
+
+
+# 删除用户
+@login_required
+def DeleteUser(request):
+    if request.method == 'POST':
+        names = request.POST.getlist('name')
+        print(names)
+        for i in range(len(names)):
+            id = names[i]
+            UserProfile.objects.filter(id=id).delete()
+        return HttpResponse()
+    else:
+        return render(request, 'userManage.html')

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>密码修改 - 智慧停车管理系统</title>
+    <title>用户管理 - 智慧停车管理系统</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +31,7 @@
 <body class="app sidebar-mini rtl">
 <!-- Navbar-->
 <header class="app-header">
-    <a class="app-header__logo" href="index.html">
+    <a class="app-header__logo" href="index">
         <font id="fontload" size="3">智慧停车管理系统</font>
     </a>
     <!-- Sidebar toggle button-->
@@ -42,7 +42,8 @@
         <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i
                 class="fa fa-user-o fa-lg"></i></a>
             <ul class="dropdown-menu settings-menu dropdown-menu-right">
-                <li><a class="dropdown-item" href="editpassword"><i class="fa fa-cog fa-lg"></i> 密码修改</a></li>
+                <li><a class="dropdown-item" href="editpassword"><i class="fa fa-cog fa-lg"></i> 密码修改</a>
+                </li>
                 <li><a class="dropdown-item" href="logout"><i class="fa fa-sign-out fa-lg"></i> 注销</a></li>
             </ul>
         </li>
@@ -66,7 +67,7 @@
                 class="app-menu__icon fa fa-car"></i><span
                 class="app-menu__label">车辆管理</span><i class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
-                <li><a class="treeview-item" href="carreal"><i class="app-menu__icon fa fa-circle-o"></i>实时车辆查询</a>
+              <li><a class="treeview-item" href="carreal"><i class="app-menu__icon fa fa-circle-o"></i>实时车辆查询</a>
                 </li>
                 <li><a class="treeview-item" href="carday"><i class="app-menu__icon fa fa-circle-o"></i>当日车辆查询</a>
                 </li>
@@ -90,8 +91,8 @@
                         class="app-menu__icon fa fa-circle-o"></i>查看收费金额</a></li>
             </ul>
         </li>
-        <li><a class="app-menu__item" href="userManage"><i class="app-menu__icon fa fa-users"></i><span
-                class="app-menu__label">用户管理</span></a></li>
+        <li><a class="app-menu__item active" href="userManage"><i
+                class="app-menu__icon fa fa-users"></i><span class="app-menu__label">用户管理</span></a></li>
 {#        <li><a class="app-menu__item" href="log"><i class="app-menu__icon fa fa-wrench"></i><span#}
 {#                class="app-menu__label">操作日志</span></a></li>#}
     </ul>
@@ -99,53 +100,100 @@
 <main class="app-content">
     <div class="app-title">
         <div>
-            <h1><i class="fa fa-wrench"></i>修改密码</h1>
+            <h1><i class="fa fa-vcard-o"></i>用户管理</h1>
         </div>
         <ul class="app-breadcrumb breadcrumb side">
             <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
             <li class="breadcrumb-item">智慧停车管理系统</li>
-            <li class="breadcrumb-item active"><a href="editpassword">密码修改</a></li>
+            <li class="breadcrumb-item active"><a href="userManage">用户管理</a></li>
         </ul>
     </div>
     <div class="row">
         <div class="col-md-12">
             <div class="tile">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <form method="post" action="editpassword">
-                            <div class="form-group">
-                                <label>当前用户名</label>
-                                <input class="form-control" name="this_username" type="text" placeholder="username">
+                <div class="tile-body">
+                    <div class="form-group">
+{#                        <div class="btn-group" data-toggle="modal" data-target="#myModal">#}
+{#                            <div class="btn btn-outline-secondary">#}
+{#                                <i class="fa fa-lg"><span>添加用户</span></i>#}
+{#                            </div>#}
+{#                        </div>#}
+                        <div class="btn-group" data-toggle="modal" data-target="#deleteModal">
+                            <div class="btn btn-outline-secondary" onclick="delete_some();">
+                                <i class="fa fa-lg"><span>删除用户</span></i>
                             </div>
-                            <div class="form-group">
-                                <label>当前密码</label>
-                                <input class="form-control" name="this_password" type="password" placeholder="Password">
-                            </div>
-                            <div class="form-group">
-                                <label>新密码</label>
-                                <input class="form-control" name="new_password" type="password"
-                                       placeholder="NewPassword">
-                            </div>
-                            <div class="form-group">
-                                <label>重复密码</label>
-                                <input class="form-control" name="" type="password" placeholder="NewPassword">
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-primary" type="submit">保存</button>
-                                <span>{{ status }}</span>
-                            </div>
-                        </form>
+                        </div>
                     </div>
+                    <table class="table table-hover table-bordered" id="sampleTable">
+                        <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox" name="checkboxlists" value="" id="all"/>
+                            </th>
+                            <th>序号</th>
+                            <th>用户名</th>
+                            <th>性别</th>
+                            <th>电子邮箱</th>
+                            <th>创建时间</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for i in users %}
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="checkboxlist" value="{{ i.id }}"/>
+                                </td>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ i.username }}</td>
+                                <td>{{ i.sex }}</td>
+                                <td>{{ i.email }}</td>
+                                <td>{{ i.created_time }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
 </main>
+
+
+<!-- 删除 -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>删除用户</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="col-lg-12" style="text-align: center;">
+                    <span style="font-size: 20px; font-family: 'arial black';">确定删除选择的用户?</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">否
+                </button>
+                <a href="userManage">
+                    <button type="button" class="btn btn-primary" id="tode">
+                        是
+                    </button>
+                </a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
 <!-- Essential javascripts for application to work-->
 <script src="/static/js/jquery-3.2.1.min.js"></script>
 <script src="/static/js/popper.min.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
 <script src="/static/js/main.js"></script>
+<script src="/static/js/bootstrapValidator.js"></script>
 <!-- The javascript plugin to display page loading on top-->
 <script src="/static/js/plugins/pace.min.js"></script>
 <!-- Page specific javascripts-->
@@ -172,6 +220,56 @@
         ga('create', 'UA-72504830-1', 'auto');
         ga('send', 'pageview');
     }
+</script>
+<!-- this page script -->
+<script type="text/javascript">
+    $('#all').click(function () {
+        if (this.checked) {
+            $("input[name='checkboxlist']").prop("checked", true);
+        } else {
+            $("input[name='checkboxlist']").prop("checked", false);
+        }
+    })
+
+    function delete_some() {
+        var chenked = $("input[name='checkboxlist']:checked").val([]);
+        names = new Array();
+        for (var i = 0; i < chenked.length; i++) {
+            names[i] = chenked[i].value;
+        }
+        console.log(names)
+    }
+
+    $("#tode").click(function () {
+        $.ajax({
+            url: "http://127.0.0.1:8000/user/deluser",
+            type: "post",
+            traditional: true,
+            data: {
+                name: names,
+            },
+            async: false,
+        })
+    });
+
+
+</script>
+<script>
+    function jiaoyan() {
+
+        var bootstrapValidator = $('#form5').data('bootstrapValidator');
+        //手动触发验证
+        bootstrapValidator.validate();
+        //判断是否都合法
+        if (bootstrapValidator.isValid()) {
+            //提交表单 注意 不能用 jquery对象 必须用dom对象
+            $('#form5')[0].submit();
+
+        }
+
+    }
+
+
 </script>
 </body>
 </html>

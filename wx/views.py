@@ -9,7 +9,7 @@ from django.shortcuts import render
 from django.views.generic.base import View
 
 from dtoken.views import make_token
-from tools.logging_check import logging_check
+
 
 from wx.models import UserProfile, Licenseplate
 import hashlib

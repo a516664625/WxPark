@@ -29,7 +29,7 @@ class NumberCar(models.Model):
 
 # 停车场内车辆信息
 class Car(models.Model):
-    plate_number = models.CharField(max_length=20,null=False)  # 车牌号码
+    plate_number = models.CharField(max_length=20, null=False)  # 车牌号码
     in_date = models.DateTimeField(auto_now_add=True)  # 进入时间
     out_date = models.DateTimeField(null=True)  # 离开时间
     stay_date = models.IntegerField(null=True)  # 停车时间
@@ -39,3 +39,17 @@ class Car(models.Model):
 
     class Meta:
         db_table = 'park_car_info'
+
+
+# 收费标准表
+class CS(models.Model):
+    # 一小时内的金额
+    hour_money = models.DecimalField(max_digits=5, decimal_places=2)
+    # 六小时内的每小时金额
+    six_money = models.DecimalField(max_digits=5, decimal_places=2)
+    # 大于6小时后的每小时金额
+    after_money = models.DecimalField(max_digits=5, decimal_places=2)
+    # 是否可用
+    able = models.IntegerField()
+    class Meta:
+        db_table='charge_standard'
