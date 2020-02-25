@@ -2,21 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7218df06-7936-4d43-a21e-0d834ec133d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/chargeMoney.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/chargeStandard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/userManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/migrations/0003_cs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/Font/platech.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/car_info_space.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/loadpicture.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/model/cascade.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/model/cascade_lbp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/model/char_chi_sim.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/model/char_judgement.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/model/char_judgement1.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/model/char_rec.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/model/model12.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/model/ocr_plate_all_gru.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/model/ocr_plate_all_w_rnn_2.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/model/plate_type.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/tset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/carDay.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/carDay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WxPark/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WxPark/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WxPark/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WxPark/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/package_list.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/carHistory.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/carHistory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/carReal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/carReal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/passwordEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/passwordEdit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chargeStandard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chargeStandard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tools/logging_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/logging_check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/time1.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wx/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,26 +83,29 @@
     <property name="ChangesTree.GroupingKeys" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/LPRC/car" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\djangoprojects\WxPark\LPRC\car" />
+      <recent name="F:\djangoprojects\WxPark\LPRC" />
+      <recent name="F:\djangoprojects\WxPark\templates" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\djangoprojects\WxPark\LPRC\car" />
+      <recent name="F:\djangoprojects\WxPark\LPRC" />
+      <recent name="F:\djangoprojects\WxPark\tools" />
       <recent name="F:\djangoprojects\WxPark\templates" />
       <recent name="F:\djangoprojects\WxPark\static\images" />
-      <recent name="F:\djangoprojects\WxPark\templates\admin" />
-      <recent name="F:\djangoprojects\WxPark" />
-      <recent name="F:\djangoprojects\WxPark\static" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\djangoprojects\WxPark\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.time1">
-    <configuration name="chepai" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.loadpicture (1)">
+    <configuration name="car_info_space" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="WxPark" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -93,12 +113,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="F:/AID1908/gzf/bishe/opencv_" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LPRC" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="F:/AID1908/gzf/bishe/opencv_/chepai.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LPRC/car_info_space.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -107,7 +127,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="time1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="loadpicture (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="WxPark" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LPRC" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LPRC/loadpicture.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="logging_check" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="WxPark" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -120,7 +162,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/time1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/logging_check.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tset" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="WxPark" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LPRC" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LPRC/tset.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -137,12 +201,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dtoken" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LPRC" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dtoken/views.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LPRC/views.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -176,9 +240,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.time1" />
+        <item itemvalue="Python.loadpicture (1)" />
+        <item itemvalue="Python.car_info_space" />
+        <item itemvalue="Python.logging_check" />
         <item itemvalue="Python.views" />
-        <item itemvalue="Python.chepai" />
+        <item itemvalue="Python.tset" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +298,11 @@
       <workItem from="1582036455022" duration="1843000" />
       <workItem from="1582117913972" duration="1360000" />
       <workItem from="1582176575836" duration="25038000" />
-      <workItem from="1582274861919" duration="16666000" />
+      <workItem from="1582274861919" duration="17429000" />
+      <workItem from="1582350292984" duration="19030000" />
+      <workItem from="1582446793895" duration="16583000" />
+      <workItem from="1582522371710" duration="27724000" />
+      <workItem from="1582608812333" duration="2275000" />
     </task>
     <task id="LOCAL-00001">
       <created>1578466998645</created>
@@ -269,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582276977764</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2.21号晚上">
+      <created>1582295292180</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582295292180</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,25 +357,31 @@
     <MESSAGE value="1.8号" />
     <MESSAGE value="2.21" />
     <MESSAGE value="2.21号" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.21号" />
+    <MESSAGE value="2.21号晚上" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.21号晚上" />
   </component>
   <component name="WindowStateProjectService">
     <state x="183" y="118" key="#Deployment" timestamp="1578467265650">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="183" y="118" key="#Deployment/0.0.1536.864@0.0.1536.864" timestamp="1578467265650" />
+    <state x="361" y="74" key="#SQL_Dialects" timestamp="1582545002776">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#SQL_Dialects/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1582545002776" />
     <state x="502" y="241" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580909249541">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="502" y="241" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864/-1440.0.1440.900@0.0.1536.864" timestamp="1580909249541" />
-    <state x="499" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581677948044">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="499" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864/-1440.0.1440.900@0.0.1536.864" timestamp="1581677948044" />
-    <state x="207" y="8" key="CommitChangelistDialog2" timestamp="1582276976802">
+    <state x="499" y="174" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582458166496">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="207" y="8" key="CommitChangelistDialog2/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582276976802" />
+    <state x="499" y="174" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1582458166496" />
+    <state x="499" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864/-1440.0.1440.900@0.0.1536.864" timestamp="1581677948044" />
+    <state x="207" y="8" key="CommitChangelistDialog2" timestamp="1582295290339">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="207" y="8" key="CommitChangelistDialog2/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582295290339" />
     <state x="207" y="48" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1578467507346" />
     <state x="0" y="97" key="DiffContextDialog" timestamp="1578467506515">
       <screen x="0" y="0" width="1536" height="864" />
@@ -318,24 +401,32 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="643" y="308" width="273" height="280" key="Github.ShareDialog/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582276560101" />
-    <state width="1493" height="163" key="GridCell.Tab.0.bottom" timestamp="1582207770530">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1397" height="2" key="GridCell.Tab.0.bottom" timestamp="1582552561204">
+      <screen x="-1440" y="0" width="1440" height="850" />
     </state>
+    <state width="1397" height="2" key="GridCell.Tab.0.bottom/-1440.0.1440.850/0.0.1536.824@-1440.0.1440.850" timestamp="1582552561204" />
+    <state width="1493" height="141" key="GridCell.Tab.0.bottom/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1582550674411" />
     <state width="1493" height="163" key="GridCell.Tab.0.bottom/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582207770530" />
     <state width="1493" height="485" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1578402779250" />
-    <state width="1493" height="163" key="GridCell.Tab.0.center" timestamp="1582207770530">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1397" height="2" key="GridCell.Tab.0.center" timestamp="1582552561203">
+      <screen x="-1440" y="0" width="1440" height="850" />
     </state>
+    <state width="1397" height="2" key="GridCell.Tab.0.center/-1440.0.1440.850/0.0.1536.824@-1440.0.1440.850" timestamp="1582552561203" />
+    <state width="1493" height="141" key="GridCell.Tab.0.center/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1582550674411" />
     <state width="1493" height="163" key="GridCell.Tab.0.center/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582207770530" />
     <state width="1493" height="485" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1578402779250" />
-    <state width="1493" height="163" key="GridCell.Tab.0.left" timestamp="1582207770530">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1397" height="2" key="GridCell.Tab.0.left" timestamp="1582552561203">
+      <screen x="-1440" y="0" width="1440" height="850" />
     </state>
+    <state width="1397" height="2" key="GridCell.Tab.0.left/-1440.0.1440.850/0.0.1536.824@-1440.0.1440.850" timestamp="1582552561203" />
+    <state width="1493" height="141" key="GridCell.Tab.0.left/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1582550674411" />
     <state width="1493" height="163" key="GridCell.Tab.0.left/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582207770530" />
     <state width="1493" height="485" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1578402779250" />
-    <state width="1493" height="163" key="GridCell.Tab.0.right" timestamp="1582207770530">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1397" height="2" key="GridCell.Tab.0.right" timestamp="1582552561203">
+      <screen x="-1440" y="0" width="1440" height="850" />
     </state>
+    <state width="1397" height="2" key="GridCell.Tab.0.right/-1440.0.1440.850/0.0.1536.824@-1440.0.1440.850" timestamp="1582552561203" />
+    <state width="1493" height="141" key="GridCell.Tab.0.right/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1582550674411" />
     <state width="1493" height="163" key="GridCell.Tab.0.right/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582207770530" />
     <state width="1493" height="485" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1578402779250" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1582203092020">
@@ -354,16 +445,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582203092019" />
-    <state x="110" y="72" key="SettingsEditor" timestamp="1582276538723">
+    <state x="110" y="72" key="SettingsEditor" timestamp="1582457930260">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="110" y="72" key="SettingsEditor/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1582457930260" />
     <state x="110" y="72" key="SettingsEditor/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582276538723" />
     <state x="110" y="75" key="SettingsEditor/0.0.1536.864/-1440.0.1440.900@0.0.1536.864" timestamp="1580910174610" />
     <state x="110" y="75" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1578467388530" />
-    <state x="267" y="173" key="Vcs.Push.Dialog.v2" timestamp="1582295243301">
+    <state x="267" y="173" key="Vcs.Push.Dialog.v2" timestamp="1582295300067">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="267" y="173" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582295243301" />
+    <state x="267" y="173" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582295300067" />
     <state x="267" y="181" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1578467026125" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1581678883606">
       <screen x="0" y="0" width="1536" height="864" />
@@ -371,8 +463,14 @@
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864/-1440.0.1440.900@0.0.1536.864" timestamp="1581678883606" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/WxPark$views.coverage" NAME="views Coverage Results" MODIFIED="1578398683656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dtoken" />
+    <SUITE FILE_PATH="coverage/WxPark$views.coverage" NAME="views Coverage Results" MODIFIED="1582530284279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LPRC" />
+    <SUITE FILE_PATH="coverage/WxPark$loadpicture__1_.coverage" NAME="loadpicture (1) Coverage Results" MODIFIED="1582550674401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LPRC" />
+    <SUITE FILE_PATH="coverage/WxPark$tset.coverage" NAME="tset Coverage Results" MODIFIED="1582525963129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LPRC" />
+    <SUITE FILE_PATH="coverage/WxPark$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1582464486500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LPRC" />
     <SUITE FILE_PATH="coverage/WxPark$time1.coverage" NAME="time1 Coverage Results" MODIFIED="1582203119912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/WxPark$test.coverage" NAME="test Coverage Results" MODIFIED="1582458093943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/WxPark$chepai.coverage" NAME="chepai Coverage Results" MODIFIED="1577785264786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="F:/AID1908/gzf/bishe/opencv_" />
+    <SUITE FILE_PATH="coverage/WxPark$logging_check.coverage" NAME="logging_check Coverage Results" MODIFIED="1582533640708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/WxPark$car_info_space.coverage" NAME="car_info_space Coverage Results" MODIFIED="1582550455478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LPRC" />
   </component>
 </project>

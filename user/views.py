@@ -37,11 +37,8 @@ def login(request):
         # m = hashlib.md5()
         # m.update(password.encode())
         if password != user.password:
-            return render(request, 'login.html', {'status': '用户名或密码错误，请重新登陆'})
 
-        # token = make_token(user.id)
-        # result = {'code': '200', 'id': user.id, 'token': token.decode()}
-        # return JsonResponse(result)
+            return render(request, 'login.html', {'status': '用户名或密码错误，请重新登陆'})
         else:
             request.session['admin'] = username
             request.session['isLogin'] = True
@@ -51,30 +48,34 @@ def login(request):
 # 管理员-首页
 @login_required
 def adminIndex(request):
-    session_name = request.session.get('admin')  # 从session中获取管理员名字
-    # 停车场内当日车辆数量
-    now = datetime.datetime.now().strftime('%Y-%m-%d')
-    print(now)
-    # 停车场当前车辆数量
-    carnum = Car.objects.filter(out_date__isnull=True)
-    count = len(carnum)
-    print(count)
-    # 总停车位数
-    car = NumberCar.objects.all()
-    print(car)
-    car = car[0]
-    print(car.number)
+    if request.method=="GET":
+        session_name = request.session.get('admin')  # 从session中获取管理员名字
+        # 停车场内当日车辆数量
+        now = datetime.datetime.now().strftime('%Y-%m-%d')
+        print(now)
+        # 停车场当前车辆数量
+        carnum = Car.objects.filter(out_date__isnull=True)
+        print(carnum)
+        count = len(carnum)
+        print(count)
+        # 总停车位数
+        car = NumberCar.objects.all()
+        print(car)
+        car = car[0]
+        print(car.number)
 
-    empty_number = car.number - count
-    ret1 = Car.objects.all().order_by('in_date')
-    context = {  # 记录保存传入界面的数据
-        'count': count,
-        'empty_number': empty_number,
-        'session_name': session_name,
-        'lists': ret1
+        empty_number = car.number - count
+        ret1 = Car.objects.all().order_by('in_date')
+        print(ret1)
 
-    }
-    return render(request, 'index.html', context)
+        context = {  # 记录保存传入界面的数据
+            'count': count,
+            'empty_number': empty_number,
+            'session_name': session_name,
+            'lists': ret1
+
+                    }
+        return render(request, 'index.html', context)
 
 
 # 修改密码

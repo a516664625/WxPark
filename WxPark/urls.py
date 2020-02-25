@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from dtoken import views
+# from dtoken import views
 from user import views
 
 urlpatterns = [

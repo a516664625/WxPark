@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'wx',
     'user',
     'dtoken',
+    'LPRC'
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,10 @@ JWT_TOKEN_KEY = '123456'
 WX_APP_ID = 'wx4c7fa5eb7edde7b6'
 WX_APP_SECRET ='1cf2941e5c62558199d98bc96e0a7762'
 WX_APP_URI = 'https://api.weixin.qq.com/sns/jscode2session'
+# 发送邮件设置
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # 固定写法
+EMAIL_HOST = 'smtp.qq.com'  # 腾讯QQ邮箱 SMTP 服务器地址
+EMAIL_PORT = 25  # SMTP服务的端口号
+EMAIL_HOST_USER = '516664625@qq.com'  # 发送邮件的QQ邮箱
+EMAIL_HOST_PASSWORD = 'nkkiujrruixrcaah'  # 在QQ邮箱->设置->帐户->“POP3/IMAP......服务” 里得到的在第三方登录QQ邮箱授权码
+EMAIL_USE_TLS = False  # 与SMTP服务器通信时，是否启动TLS链接(安全链接)默认false

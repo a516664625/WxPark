@@ -6,7 +6,6 @@ from django.urls import reverse
 
 from wx.models import UserProfile
 
-
 def login_required(view_func):
     def wrapper(request, *view_args, **view_kwargs):
         if request.session.has_key('isLogin'):
