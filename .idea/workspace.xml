@@ -2,38 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7218df06-7936-4d43-a21e-0d834ec133d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/Font/platech.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/car_info_space.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/loadpicture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/model/cascade.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/model/cascade_lbp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/model/char_chi_sim.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/model/char_judgement.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/model/char_judgement1.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/model/char_rec.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/model/model12.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/model/ocr_plate_all_gru.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/model/ocr_plate_all_w_rnn_2.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/model/plate_type.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/tset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LPRC/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LPRC/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wx/migrations/0002_auto_20200225_2115.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wx/migrations/0003_suggestions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WxPark/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WxPark/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LPRC/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/LPRC/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WxPark/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WxPark/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/package_list.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/carHistory.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/carHistory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/chargeStandard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chargeStandard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/logging_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/logging_check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/time1.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wx/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/wx/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wx/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/wx/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wx/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wx/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +66,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/LPRC/car" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -302,7 +280,11 @@
       <workItem from="1582350292984" duration="19030000" />
       <workItem from="1582446793895" duration="16583000" />
       <workItem from="1582522371710" duration="27724000" />
-      <workItem from="1582608812333" duration="2275000" />
+      <workItem from="1582608812333" duration="14854000" />
+      <workItem from="1582782933033" duration="2647000" />
+      <workItem from="1582803194285" duration="1256000" />
+      <workItem from="1582957100297" duration="15874000" />
+      <workItem from="1583051198173" duration="13935000" />
     </task>
     <task id="LOCAL-00001">
       <created>1578466998645</created>
@@ -346,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582295292180</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="2.25号下午">
+      <created>1582611340538</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1582611340538</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +347,8 @@
     <MESSAGE value="2.21" />
     <MESSAGE value="2.21号" />
     <MESSAGE value="2.21号晚上" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.21号晚上" />
+    <MESSAGE value="2.25号下午" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.25号下午" />
   </component>
   <component name="WindowStateProjectService">
     <state x="183" y="118" key="#Deployment" timestamp="1578467265650">
@@ -378,9 +368,10 @@
     </state>
     <state x="499" y="174" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1582458166496" />
     <state x="499" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864/-1440.0.1440.900@0.0.1536.864" timestamp="1581677948044" />
-    <state x="207" y="8" key="CommitChangelistDialog2" timestamp="1582295290339">
+    <state x="207" y="8" key="CommitChangelistDialog2" timestamp="1582611337036">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="207" y="8" key="CommitChangelistDialog2/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1582611337036" />
     <state x="207" y="8" key="CommitChangelistDialog2/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582295290339" />
     <state x="207" y="48" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1578467507346" />
     <state x="0" y="97" key="DiffContextDialog" timestamp="1578467506515">
@@ -445,16 +436,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582203092019" />
-    <state x="110" y="72" key="SettingsEditor" timestamp="1582457930260">
+    <state x="110" y="72" key="SettingsEditor" timestamp="1582961148071">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="110" y="72" key="SettingsEditor/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1582457930260" />
+    <state x="110" y="72" key="SettingsEditor/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1582961148071" />
     <state x="110" y="72" key="SettingsEditor/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582276538723" />
     <state x="110" y="75" key="SettingsEditor/0.0.1536.864/-1440.0.1440.900@0.0.1536.864" timestamp="1580910174610" />
     <state x="110" y="75" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1578467388530" />
-    <state x="267" y="173" key="Vcs.Push.Dialog.v2" timestamp="1582295300067">
+    <state x="267" y="173" key="Vcs.Push.Dialog.v2" timestamp="1582611344361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="267" y="173" key="Vcs.Push.Dialog.v2/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1582611344361" />
     <state x="267" y="173" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582295300067" />
     <state x="267" y="181" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1578467026125" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1581678883606">

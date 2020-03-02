@@ -19,23 +19,21 @@ def login(request):
     if request.method == 'GET':
         return render(request, 'login.html')
     if request.method == 'POST':
-        username = request.POST['username']  # 获取表单内输入的用户名
-        print(username)
-        password = request.POST['password']  # 获取表单内输入的密  码
-        print(password)
+        username = request.POST.get('username') # 获取表单内输入的用户名
+
+        password = request.POST.get('password') # 获取表单内输入的密  码
+
         # TODO 检查参数是否存在
 
         # 查询用户
         user = AdminProfile.objects.filter(username=username)
-        print(user)
+
         if not user:
             return render(request, 'login.html', {'status': '用户名或密码错误，请重新登陆'})
 
         user = user[0]
-        print(user.password)
-        # import hashlib
-        # m = hashlib.md5()
-        # m.update(password.encode())
+
+
         if password != user.password:
 
             return render(request, 'login.html', {'status': '用户名或密码错误，请重新登陆'})
@@ -52,22 +50,14 @@ def adminIndex(request):
         session_name = request.session.get('admin')  # 从session中获取管理员名字
         # 停车场内当日车辆数量
         now = datetime.datetime.now().strftime('%Y-%m-%d')
-        print(now)
         # 停车场当前车辆数量
         carnum = Car.objects.filter(out_date__isnull=True)
-        print(carnum)
         count = len(carnum)
-        print(count)
         # 总停车位数
         car = NumberCar.objects.all()
-        print(car)
         car = car[0]
-        print(car.number)
-
         empty_number = car.number - count
         ret1 = Car.objects.all().order_by('in_date')
-        print(ret1)
-
         context = {  # 记录保存传入界面的数据
             'count': count,
             'empty_number': empty_number,

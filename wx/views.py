@@ -10,8 +10,7 @@ from django.views.generic.base import View
 
 from dtoken.views import make_token
 
-
-from wx.models import UserProfile, Licenseplate
+from wx.models import UserProfile, Licenseplate, Suggestions
 import hashlib
 
 dist1 = {}
@@ -155,6 +154,7 @@ def addcar(request):
             return JsonResponse({'code': 200, 'message': '添加车牌信息成功!'})
 
 
+# 显示车牌
 def showcar(request):
     if request.method == 'GET':
         return JsonResponse({'code': 'showcar'})
@@ -169,8 +169,60 @@ def showcar(request):
         print(type(user))
         car = []
         if user:
+
             for i in user:
-                car.append(i.license)
+                car.append({'id': i.id, 'name': i.license, 'txtStyle': ''})
             return JsonResponse({'code': 200, 'message': car})
         else:
             return JsonResponse({'code': 200, 'message': '你还未绑定车牌'})
+
+
+# 删除车牌
+def delCar(request):
+    if request.method == 'GET':
+        return JsonResponse({'code': 'showcar'})
+    if request.method == 'POST':
+        data = request.body
+        print("******")
+        print(data)
+        data_obj = json.loads(data)
+        user_id = data_obj.get('user_id')
+        print("******")
+        print(user_id)
+        car_id = data_obj.get('id')
+        print(car_id)
+        Licenseplate.objects.filter(id=car_id, user_id=user_id).delete()
+        return JsonResponse({'code': 200})
+
+
+# 绑定邮箱
+def bindEmail(request):
+    if request.method == 'GET':
+        return JsonResponse({'code': 'bindemail'})
+    if request.method == 'POST':
+        data = request.body
+        print(data)
+        data_obj = json.loads(data)
+        id = data_obj.get('user_id')
+        email = data_obj.get('email')
+        user = UserProfile.objects.filter(id=id)
+        old_user = user[0]
+        if old_user.email:
+            return JsonResponse({'code': 101, 'message': '此账号已绑定邮箱'})
+        else:
+            user.update(email=email)
+            return JsonResponse({'code': 200, 'message': '绑定成功'})
+
+
+# 提交建议
+def submitSuggest(request):
+    if request.method == 'GET':
+        return JsonResponse({'code': 'submitSuggest'})
+    if request.method == 'POST':
+        data = request.body
+        print(data)
+        data_obj = json.loads(data)
+        suggest = data_obj.get('suggest')
+        id = data_obj.get('id')
+        Suggestions.objects.create(suggest=suggest, user_id=id)
+        return JsonResponse({'code': 200})

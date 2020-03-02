@@ -24,5 +24,6 @@ urlpatterns = [
     url(r'^user/', include('user.urls')),
     url(r'^wx/', include('wx.urls')),
     url(r'^dtoken/', include('dtoken.urls')),
+    url(r'^LPRC/',include('LPRC.urls')),
     url(r'^', views.login),
 ]
