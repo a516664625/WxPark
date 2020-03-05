@@ -11,8 +11,12 @@ urlpatterns = [
     # 停车状态 http://127.0.0.1:8000/LPRC/status
     url('^status$', views.statusStop, name='status'),
     # 停车订单 http://127.0.0.1:8000/LPRC/orders
-    # url('^orders$', views.orders, name='orders'),
-    # 支付 http://127.0.0.1:8000/LPRC/payorders
-    url('^payorders$', views.payOrders, name='payorders')
+    url('^orders$', views.orders, name='orders'),
+    # 查询订单 http://127.0.0.1:8000/LPRC/payorders
+    url('^payorders$', views.payOrders, name='payorders'),
+    # 查看车辆是否出场 http://127.0.0.1:8000/LPRC/isoutpark
+    url('^isoutpark$', views.isOutpark, name='isoutpark'),
+    #支付http://127.0.0.1:8000/LPRC/pay
+    url('^pay$', views.pay, name='pay')
 
 ]

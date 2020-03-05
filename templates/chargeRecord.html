@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>当日车辆信息查询-智慧停车管理系统</title>
+    <title>查看收费记录 - 智慧停车管理系统</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/static/images/huade.ico">
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/daterangepicker.css"/>
     <!-- Font-icon css-->
     <style>
         @font-face {
@@ -31,7 +32,7 @@
 <body class="app sidebar-mini rtl">
 <!-- Navbar-->
 <header class="app-header">
-    <a class="app-header__logo" href="index.html">
+    <a class="app-header__logo" href="index">
         <font id="fontload" size="3">智慧停车管理系统</font>
     </a>
     <!-- Sidebar toggle button-->
@@ -42,7 +43,8 @@
         <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i
                 class="fa fa-user-o fa-lg"></i></a>
             <ul class="dropdown-menu settings-menu dropdown-menu-right">
-                <li><a class="dropdown-item" href="editpassword"><i class="fa fa-cog fa-lg"></i> 密码修改</a></li>
+                <li><a class="dropdown-item" href="editpassword"><i class="fa fa-cog fa-lg"></i> 密码修改</a>
+                </li>
                 <li><a class="dropdown-item" href="logout"><i class="fa fa-sign-out fa-lg"></i> 注销</a></li>
             </ul>
         </li>
@@ -66,8 +68,10 @@
                 class="app-menu__icon fa fa-car"></i><span
                 class="app-menu__label">车辆管理</span><i class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
-                <li><a class="treeview-item" href="carreal"><i class="app-menu__icon fa fa-circle-o"></i>实时车辆查询</a></li>
-                <li><a class="treeview-item" href="carday"><i class="app-menu__icon fa fa-circle-o"></i>当日车辆查询</a></li>
+                 <li><a class="treeview-item" href="carreal"><i class="app-menu__icon fa fa-circle-o"></i>实时车辆查询</a>
+                </li>
+                <li><a class="treeview-item" href="carday"><i class="app-menu__icon fa fa-circle-o"></i>当日车辆查询</a>
+                </li>
                 <li><a class="treeview-item" href="carhistory"><i class="app-menu__icon fa fa-circle-o"></i>车辆历史查询</a>
                 </li>
             </ul>
@@ -80,8 +84,7 @@
                         class="app-menu__icon fa fa-circle-o"></i>收费标准设定</a></li>
             </ul>
         </li>
-
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i
+        <li class="treeview"><a class="app-menu__item active" href="#" data-toggle="treeview"><i
                 class="app-menu__icon fa fa-money"></i><span
                 class="app-menu__label">财务管理</span><i class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -91,75 +94,113 @@
         </li>
         <li><a class="app-menu__item" href="userManage"><i class="app-menu__icon fa fa-users"></i><span
                 class="app-menu__label">用户管理</span></a></li>
-{#        <li><a class="app-menu__item" href="log"><i class="app-menu__icon fa fa-wrench"></i><span#}
-{#                class="app-menu__label">操作日志</span></a></li>#}
+
     </ul>
 </aside>
 <main class="app-content">
     <div class="app-title">
         <div>
-            <h1><i class="fa fa-list-ul"></i>当日车辆信息查询</h1>
+            <h1><i class="fa fa-list-ul"></i>查看收费记录</h1>
         </div>
         <ul class="app-breadcrumb breadcrumb side">
             <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
             <li class="breadcrumb-item">智慧停车管理系统</li>
-            <li class="breadcrumb-item active"><a href="carDay">当日车辆信息查询</a></li>
+            <li class="breadcrumb-item active"><a href="chargeRecord">查看收费记录</a></li>
         </ul>
     </div>
     <div class="row">
         <div class="col-md-12">
             <div class="tile">
+                <div class="form-group">
+                    <!--
+                    <div id="" class="btn-group">
+                        <div class="btn btn-outline-secondary">
+                            请选择查询日期范围:<input type="text" id="config-demo" size="40" style="border: 0px; outline: none;">
+                        </div>
+                    </div>
+                    -->
+                    <div class="btn-group">
+                        <div class="btn btn-outline-secondary">
+                            <i class="fa fa-lg"><span onclick="jQuery.print('#sampleTable')">打印</span></i>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <div class="btn btn-outline-secondary">
+                            <i class="fa fa-lg"><span id="excel">导出Excel</span></i>
+                        </div>
+                    </div>
+                </div>
                 <div class="tile-body">
+
                     <table class="table table-hover table-bordered" id="sampleTable">
                         <thead>
                         <tr>
                             <th>序号</th>
                             <th>车牌号码</th>
                             <th>车辆类型</th>
-                            <th>进入时间</th>
-                            <th>离开时间</th>
-                            <th>入口信息</th>
-                            <th>出口信息</th>
+                            <th>停车时长(时)</th>
+                            <th>收费金额</th>
+                            <th>收费时间</th>
                         </tr>
                         </thead>
                         <tbody>
-                        {% for i in carDayLists %}
+                        {% for i in recordLists %}
                             <tr>
-                                <td>{{ forloop.counter }}</td>
-                                <td>{{ i.plate_number }}</td>
-                                <td>{{ i.car_type }}</td>
-                                <td>{{ i.in_date }}</td>
-                                {% if i.out_date == None %}
-                                    <td>未离开</td>
-                                {% else %}
-                                    <td>{{ i.out_date }}</td>
-                                {% endif %}
-                                <td>{{ i.enter_info }}</td>
-                                {% if i.exit_info == None %}
-                                    <td>未离开</td>
-                                {% else %}
-                                    <td>{{ i.exit_info }}</td>
-                                {% endif %}
-                            </tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ i.plate_number }}</td>
+                            <td>{{ i.car_type }}</td>
+                            <td>{{ i.stay_date }}</td>
+                            <td>{{ i.money }}</td>
+                            <td>{{ i.out_date }}</td>
+                        </tr>
                         {% endfor %}
                         </tbody>
                     </table>
+
                 </div>
             </div>
         </div>
     </div>
 </main>
-<!-- Essential javascripts for application to work-->
+<!-- date js -->
+<script src="/static/js/moment.js"></script>
 <script src="/static/js/jquery-3.2.1.min.js"></script>
+<script src="/static/js/daterangepicker.js"></script>
+<!-- Essential javascripts for application to work-->
 <script src="/static/js/popper.min.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
 <script src="/static/js/main.js"></script>
+<script src="/static/js/jquery.table2excel.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#excel").click(function () {
+            $("#sampleTable").table2excel({
+                // 不被导出的表格行的CSS class类
+                exclude: ".noExl",
+                // 导出的Excel文档的名称
+                name: "Excel Document Name",
+                // Excel文件的名称
+                filename: "收费记录",
+                //文件后缀名
+                fileext: ".xls",
+                //是否排除导出图片
+                exclude_img: false,
+                //是否排除导出超链接
+                exclude_links: false,
+                //是否排除导出输入框中的内容
+                exclude_inputs: false
+            });
+        });
+    });
+</script>
 <!-- The javascript plugin to display page loading on top-->
 <script src="/static/js/plugins/pace.min.js"></script>
 <!-- Page specific javascripts-->
 <!-- Data table plugin-->
 <script src="/static/js/plugins/jquery.dataTables.min.js"></script>
 <script src="/static/js/plugins/dataTables.bootstrap.min.js"></script>
+<!-- print js -->
+<script src="/static/js/jQuery.print.js"></script>
 <script type="text/javascript">
     $('#sampleTable').DataTable();
 </script>
@@ -181,36 +222,46 @@
         ga('send', 'pageview');
     }
 </script>
-<!-- this page script -->
 <script type="text/javascript">
-    Date.prototype.format = function (fmt) {
-        var o = {
-            "M+": this.getMonth() + 1, //月份
-            "d+": this.getDate(), //日
-            "H+": this.getHours(), //小时
-            "m+": this.getMinutes(), //分
-            "s+": this.getSeconds(), //秒
-            "q+": Math.floor((this.getMonth() + 3) / 3), //季度
-            "S+": this.getMilliseconds() //毫毛
-        };
-        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
-        for (var k in o)
-            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" +
-                o[k]).substr(("" + o[k]).length)));
-        return fmt;
-    };
+    var beginTimeStore = '';
+    var endTimeStore = '';
+    first = "";
+    second = "";
+    $('#config-demo').daterangepicker({
+        "timePicker24Hour": true,
+        "linkedCalendars": false,
+        "autoUpdateInput": false,
+        "locale": {
+            format: 'YYYY年MM月D日',
+            separator: ' ~ ',
+            applyLabel: "确定",
+            cancelLabel: "取消",
+            resetLabel: "重置",
+        }
+    }, function (start, end, label) {
+        beginTimeStore = start;
+        endTimeStore = end;
+        first = this.startDate.format(this.locale.format);
+        second = this.endDate.format(this.locale.format);
+        console.log(this.startDate.format(this.locale.format));
+        console.log(this.endDate.format(this.locale.format));
+        if (!this.startDate) {
+            this.element.val('');
+        } else {
+            this.element.val(this.startDate.format(this.locale.format) + this.locale.separator + this.endDate.format(this.locale.format));
+        }
 
-    function showDate() {
-        var date = new Date().format('yyyy-MM-dd');
+
+        /*
         var tb = document.getElementById('sampleTable');
         var row = tb.rows;
         // console.log(row);
         var lineNumner = 0;
         for (var i = 1; i < row.length; i++) {
-            var tdValue = row[i].cells[2].innerHTML.substring(0, 10)
-            // console.log(tdValue);
+            var tdValue = row[i].cells[3].innerHTML.substring(0, 11);
+            console.log(tdValue);
             // console.log(row[i]);
-            if (date == tdValue) {
+            if (tdValue >= first && tdValue <= second) {
                 lineNumner++;
                 // console.log(lineNumner);
                 row[i].cells[0].innerHTML = lineNumner;
@@ -218,7 +269,10 @@
                 row[i].style.display = "none";
             }
         }
-    }
+        */
+
+
+    });
 </script>
 </body>
 </html>

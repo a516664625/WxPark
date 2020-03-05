@@ -20,9 +20,6 @@ class AdminProfile(models.Model):
 class NumberCar(models.Model):
     number = models.IntegerField(verbose_name='车位数', primary_key=True)
 
-    # car=models.IntegerField(verbose_name='当前车数量',default=0)
-    # personnum=models.IntegerField(verbose_name='人数',default=0)
-
     class Meta:
         db_table = 'Parking_digits'
 
@@ -32,10 +29,12 @@ class Car(models.Model):
     plate_number = models.CharField(max_length=20, null=False)  # 车牌号码
     in_date = models.DateTimeField(auto_now_add=True)  # 进入时间
     out_date = models.DateTimeField(null=True)  # 离开时间
-    stay_date = models.IntegerField(null=True)  # 停车时间
+    stay_date = models.CharField(max_length=100,null=True)  # 停车时间
     car_type = models.CharField(max_length=20)  # 车辆类型
     enter_info = models.CharField(max_length=20)  # 入口信息
     exit_info = models.CharField(max_length=20, null=True)  # 出口信息
+    money = models.DecimalField(max_digits=6, decimal_places=2, null=True,default=None)
+    isout=models.IntegerField(default=0)
 
     class Meta:
         db_table = 'park_car_info'
@@ -51,5 +50,6 @@ class CS(models.Model):
     after_money = models.DecimalField(max_digits=5, decimal_places=2)
     # 是否可用
     able = models.IntegerField()
+
     class Meta:
-        db_table='charge_standard'
+        db_table = 'charge_standard'

@@ -1,3 +1,4 @@
+import datetime
 import json
 
 from django.conf import settings
@@ -9,6 +10,7 @@ from django.shortcuts import render
 from django.views.generic.base import View
 
 from dtoken.views import make_token
+from user.models import Car
 
 from wx.models import UserProfile, Licenseplate, Suggestions
 import hashlib
@@ -226,3 +228,33 @@ def submitSuggest(request):
         id = data_obj.get('id')
         Suggestions.objects.create(suggest=suggest, user_id=id)
         return JsonResponse({'code': 200})
+
+
+# 查看历史停车记录
+def History(request):
+    if request.method == 'GET':
+        return JsonResponse({'code': 'history'})
+    if request.method == 'POST':
+        data = request.body
+        print(data)
+        data_obj = json.loads(data)
+        date = data_obj.get('time')
+        print(date)
+        print(type(date))
+        id = data_obj.get('id')
+        plate = Licenseplate.objects.filter(user_id=id)
+        # now = datetime.datetime.now().strftime('%Y-%m-%d')
+        history_car = []
+        if plate:
+            for i in plate:
+                plate_num = i.license
+                car = Car.objects.filter(plate_number=plate_num,in_date__date=date, out_date__isnull=False)
+                print(car)
+                if car:
+                    history_car.append({'car_number':car[0].plate_number,'car_money':car[0].money,'exit_info':car[0].enter_info,'paytime':car[0].out_date,'stop_time':car[0].stay_date})
+            return JsonResponse({'code':200,'history':history_car})
+        else:
+            return JsonResponse({'code':201})
+
+
+

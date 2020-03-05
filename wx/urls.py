@@ -18,5 +18,7 @@ urlpatterns = [
     url(r'submit', views.submitSuggest,name='submit'),
     #删除车牌http://127.0.0.1:8000/wx/delcar
     url(r'delcar', views.delCar,name='delcar'),
+    #查看停车记录http://127.0.0.1:8000/wx/history
+    url(r'history', views.History,name='history'),
 
 ]

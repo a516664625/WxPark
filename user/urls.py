@@ -25,6 +25,8 @@ urlpatterns = [
     url(r'^userManage',views.userManage,name='userManage'),
     #删除用户http://127.0.0.1:8000/user/deluser
     url(r'^deluser',views.DeleteUser,name='deluser'),
+    #收费记录http://127.0.0.1:8000/user/chargeRecord
+    url(r'^chargeRecord',views.record,name='chargeRecord'),
 
 
 

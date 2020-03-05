@@ -23,15 +23,15 @@ db = pymysql.connect(host='localhost',
                      database='wxpark',
                      charset='utf8')
 # 生成游标对象(操作数据库,执行sql语句)
-cur = db.cursor()
+
 smtp = "smtp.qq.com"
 pwd = 'nkkiujrruixrcaah'
 # 车牌识别
 while True:
+    cur = db.cursor()
     path = 'car/'
     list = os.listdir(path)
     length = len(list)
-
     time.sleep(2)
     if length >= 1:
         for i in list:
@@ -41,10 +41,16 @@ while True:
             img, res = pp.SimpleRecognizePlate(image)
             os.remove(filename)
             plate = ''.join(res)
+            plate_length=len(plate)
+            car_type='燃油'
+            if plate_length==7:
+                car_type='燃油'
+            if plate_length==8:
+                car_type='新能源'
             now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             sql = "insert into park_car_info (plate_number,in_date,car_type,enter_info) values(%s,%s,%s,%s) "
             try:
-                cur.execute(sql, [plate, now, '燃油', '1'])
+                cur.execute(sql, [plate, now, car_type, '1'])
                 db.commit()
             except:
                 db.rollback()
@@ -65,7 +71,6 @@ while True:
             print(username)
             print(type(username))
             cur.close()
-            db.close()
             sender_from = '516664625@qq.com'  # 发件人邮箱
             print(sender_from)
             sender_to = email

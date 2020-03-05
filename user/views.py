@@ -226,3 +226,16 @@ def DeleteUser(request):
         return HttpResponse()
     else:
         return render(request, 'userManage.html')
+#查看收费记录
+@login_required
+def record(request):
+    if request.method == 'GET':
+        session_name = request.session.get('admin')
+        car=Car.objects.filter(out_date__isnull=False)
+        context = {
+            'recordLists': car,
+            'session_name': session_name
+
+        }
+        return render(request, 'chargeRecord.html', context)
+
