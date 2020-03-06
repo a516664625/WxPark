@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/wxlogin/wxlogin",
+    "pages/login/login",
+    "pages/parkstop/parkstop",
+    "pages/parking/parking",
+    "pages/register/register",
+    "pages/carnumber/carnumber",
+    "pages/mycenter/mycenter",
+    "pages/mycenter/mycar/mycar",
+    "pages/mycenter/record/record",
+    "pages/mycenter/bind_email/bind_email",
+    "pages/mycenter/kefu/kefu",
+    "pages/mycenter/advice/advice",
+    "pages/mycenter/about/about",
+    "pages/pay/pay",
+    "pages/pay/paysucess/paysucess"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/parking/parking",
+        "text": "首页",
+        "iconPath": "icons/首页.png",
+        "selectedIconPath": "icons/首页 (1).png"
+      },
+      {
+        "pagePath": "pages/parkstop/parkstop",
+        "text": "停车",
+        "iconPath": "icons/停车场.png",
+        "selectedIconPath": "icons/停车场 (1).png"
+      },
+      {
+        "pagePath": "pages/mycenter/mycenter",
+        "text": "个人中心",
+        "iconPath": "icons/个人中心.png",
+        "selectedIconPath": "icons/个人中心 (1).png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
