@@ -45,7 +45,6 @@ def tokens(request):
 
 def make_token(id, expire=3600 * 24):
     # 注册/登录成功后 签发token 默认一天有效期
-
     key = settings.JWT_TOKEN_KEY
     now = time.time()
 
