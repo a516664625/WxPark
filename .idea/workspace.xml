@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7218df06-7936-4d43-a21e-0d834ec133d4" name="Default Changelist" comment="3.5号下午">
+    <list default="true" id="7218df06-7936-4d43-a21e-0d834ec133d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dtoken/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dtoken/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WxPark/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WxPark/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,25 +56,25 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/images" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/face_recognition(1)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\djangoprojects\WxPark\static\images" />
-      <recent name="F:\djangoprojects\WxPark\LPRC\car_out_img" />
-      <recent name="F:\djangoprojects\WxPark\LPRC\car" />
-      <recent name="F:\djangoprojects\WxPark\LPRC" />
-      <recent name="F:\djangoprojects\WxPark\tools" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\djangoprojects\WxPark\static\images" />
       <recent name="F:\djangoprojects\WxPark\templates" />
       <recent name="F:\djangoprojects\WxPark\LPRC\car_out_img" />
       <recent name="F:\djangoprojects\WxPark\LPRC\car" />
       <recent name="F:\djangoprojects\WxPark\LPRC" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\djangoprojects\WxPark\static\images" />
+      <recent name="F:\djangoprojects\WxPark\LPRC\car_out_img" />
+      <recent name="F:\djangoprojects\WxPark\LPRC\car" />
+      <recent name="F:\djangoprojects\WxPark\LPRC" />
+      <recent name="F:\djangoprojects\WxPark\tools" />
     </key>
   </component>
   <component name="RunManager" selected="Python.test">
@@ -283,7 +284,14 @@
       <workItem from="1583211849686" duration="32285000" />
       <workItem from="1583298673682" duration="17767000" />
       <workItem from="1583383675753" duration="11997000" />
-      <workItem from="1583472888418" duration="616000" />
+      <workItem from="1583472888418" duration="5263000" />
+      <workItem from="1583554835947" duration="525000" />
+      <workItem from="1583563941662" duration="7052000" />
+      <workItem from="1583719582768" duration="1293000" />
+      <workItem from="1583810908508" duration="660000" />
+      <workItem from="1583836121784" duration="2075000" />
+      <workItem from="1584004280790" duration="1086000" />
+      <workItem from="1584951967620" duration="2199000" />
     </task>
     <task id="LOCAL-00001">
       <created>1578466998645</created>
@@ -355,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583391129020</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="3.6号下午">
+      <created>1583474540501</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1583474540501</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +385,8 @@
     <MESSAGE value="2.25号下午" />
     <MESSAGE value="3.2号下午" />
     <MESSAGE value="3.5号下午" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.5号下午" />
+    <MESSAGE value="3.6号下午" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.6号下午" />
   </component>
   <component name="WindowStateProjectService">
     <state x="183" y="118" key="#Deployment" timestamp="1578467265650">
@@ -390,20 +406,21 @@
     </state>
     <state x="499" y="174" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1583318630881" />
     <state x="499" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864/-1440.0.1440.900@0.0.1536.864" timestamp="1581677948044" />
-    <state x="-1246" y="8" key="CommitChangelistDialog2" timestamp="1583394410396">
-      <screen x="-1440" y="0" width="1440" height="850" />
+    <state x="207" y="8" key="CommitChangelistDialog2" timestamp="1583474537914">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="-1246" y="8" key="CommitChangelistDialog2/-1440.0.1440.850/0.0.1536.824@-1440.0.1440.850" timestamp="1583394410396" />
-    <state x="207" y="8" key="CommitChangelistDialog2/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1582611337036" />
+    <state x="207" y="8" key="CommitChangelistDialog2/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1583474537914" />
     <state x="207" y="8" key="CommitChangelistDialog2/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582295290339" />
     <state x="207" y="48" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1578467507346" />
     <state x="0" y="97" key="DiffContextDialog" timestamp="1578467506515">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="0" y="97" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1578467506515" />
-    <state x="599" y="176" key="FileChooserDialogImpl" timestamp="1582275710397">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="599" y="185" key="FileChooserDialogImpl" timestamp="1584957844175">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="599" y="185" key="FileChooserDialogImpl/-1440.0.1440.900/0.0.1536.864@0.0.1536.864" timestamp="1584957844175" />
     <state x="599" y="176" key="FileChooserDialogImpl/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582275710397" />
     <state x="599" y="185" key="FileChooserDialogImpl/0.0.1536.864/-1440.0.1440.900@0.0.1536.864" timestamp="1580911238186" />
     <state x="653" y="203" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1578631052876" />
@@ -415,32 +432,36 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="643" y="308" width="273" height="280" key="Github.ShareDialog/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582276560101" />
-    <state width="1493" height="510" key="GridCell.Tab.0.bottom" timestamp="1583330723054">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="191" key="GridCell.Tab.0.bottom" timestamp="1583588239711">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1397" height="2" key="GridCell.Tab.0.bottom/-1440.0.1440.850/0.0.1536.824@-1440.0.1440.850" timestamp="1582552561204" />
     <state width="1493" height="510" key="GridCell.Tab.0.bottom/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1583330723054" />
+    <state width="1493" height="191" key="GridCell.Tab.0.bottom/-1440.0.1440.900/0.0.1536.864@0.0.1536.864" timestamp="1583588239711" />
     <state width="1493" height="163" key="GridCell.Tab.0.bottom/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582207770530" />
     <state width="1493" height="485" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1578402779250" />
-    <state width="1493" height="510" key="GridCell.Tab.0.center" timestamp="1583330723053">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="191" key="GridCell.Tab.0.center" timestamp="1583588239711">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1397" height="2" key="GridCell.Tab.0.center/-1440.0.1440.850/0.0.1536.824@-1440.0.1440.850" timestamp="1582552561203" />
     <state width="1493" height="510" key="GridCell.Tab.0.center/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1583330723053" />
+    <state width="1493" height="191" key="GridCell.Tab.0.center/-1440.0.1440.900/0.0.1536.864@0.0.1536.864" timestamp="1583588239711" />
     <state width="1493" height="163" key="GridCell.Tab.0.center/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582207770530" />
     <state width="1493" height="485" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1578402779250" />
-    <state width="1493" height="510" key="GridCell.Tab.0.left" timestamp="1583330723053">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="191" key="GridCell.Tab.0.left" timestamp="1583588239711">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1397" height="2" key="GridCell.Tab.0.left/-1440.0.1440.850/0.0.1536.824@-1440.0.1440.850" timestamp="1582552561203" />
     <state width="1493" height="510" key="GridCell.Tab.0.left/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1583330723053" />
+    <state width="1493" height="191" key="GridCell.Tab.0.left/-1440.0.1440.900/0.0.1536.864@0.0.1536.864" timestamp="1583588239711" />
     <state width="1493" height="163" key="GridCell.Tab.0.left/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582207770530" />
     <state width="1493" height="485" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1578402779250" />
-    <state width="1493" height="510" key="GridCell.Tab.0.right" timestamp="1583330723054">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="191" key="GridCell.Tab.0.right" timestamp="1583588239711">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1397" height="2" key="GridCell.Tab.0.right/-1440.0.1440.850/0.0.1536.824@-1440.0.1440.850" timestamp="1582552561203" />
     <state width="1493" height="510" key="GridCell.Tab.0.right/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1583330723054" />
+    <state width="1493" height="191" key="GridCell.Tab.0.right/-1440.0.1440.900/0.0.1536.864@0.0.1536.864" timestamp="1583588239711" />
     <state width="1493" height="163" key="GridCell.Tab.0.right/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582207770530" />
     <state width="1493" height="485" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1578402779250" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1583252159066">
@@ -475,11 +496,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1583237811821" />
-    <state x="-1190" y="178" key="Vcs.Push.Dialog.v2" timestamp="1583391132075">
-      <screen x="-1440" y="0" width="1440" height="850" />
+    <state x="267" y="173" key="Vcs.Push.Dialog.v2" timestamp="1583474544285">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="-1190" y="178" key="Vcs.Push.Dialog.v2/-1440.0.1440.850/0.0.1536.824@-1440.0.1440.850" timestamp="1583391132075" />
-    <state x="267" y="173" key="Vcs.Push.Dialog.v2/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1582611344361" />
+    <state x="267" y="173" key="Vcs.Push.Dialog.v2/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1583474544285" />
     <state x="267" y="173" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582295300067" />
     <state x="267" y="181" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1578467026125" />
     <state x="-1510" y="71" width="1260" height="810" maximized="true" key="dock-window-1" timestamp="1583316469956">
@@ -507,7 +528,7 @@
     <SUITE FILE_PATH="coverage/WxPark$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1582464486500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LPRC" />
     <SUITE FILE_PATH="coverage/WxPark$jsmoney.coverage" NAME="jsmoney Coverage Results" MODIFIED="1583245144907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LPRC" />
     <SUITE FILE_PATH="coverage/WxPark$time1.coverage" NAME="time1 Coverage Results" MODIFIED="1582203119912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
-    <SUITE FILE_PATH="coverage/WxPark$test.coverage" NAME="test Coverage Results" MODIFIED="1583311838087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/WxPark$test.coverage" NAME="test Coverage Results" MODIFIED="1583568916963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/WxPark$chepai.coverage" NAME="chepai Coverage Results" MODIFIED="1577785264786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="F:/AID1908/gzf/bishe/opencv_" />
     <SUITE FILE_PATH="coverage/WxPark$logging_check.coverage" NAME="logging_check Coverage Results" MODIFIED="1582533640708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/WxPark$car_info_space.coverage" NAME="car_info_space Coverage Results" MODIFIED="1582550455478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LPRC" />
