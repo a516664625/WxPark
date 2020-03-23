@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7218df06-7936-4d43-a21e-0d834ec133d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WxPark/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WxPark/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,6 +290,7 @@
       <workItem from="1583836121784" duration="2075000" />
       <workItem from="1584004280790" duration="1086000" />
       <workItem from="1584951967620" duration="2199000" />
+      <workItem from="1584972214547" duration="262000" />
     </task>
     <task id="LOCAL-00001">
       <created>1578466998645</created>
@@ -370,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583474540501</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="3.23号晚上完成度99%">
+      <created>1584972296781</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1584972296781</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +392,8 @@
     <MESSAGE value="3.2号下午" />
     <MESSAGE value="3.5号下午" />
     <MESSAGE value="3.6号下午" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.6号下午" />
+    <MESSAGE value="3.23号晚上完成度99%" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.23号晚上完成度99%" />
   </component>
   <component name="WindowStateProjectService">
     <state x="183" y="118" key="#Deployment" timestamp="1578467265650">
@@ -406,11 +413,12 @@
     </state>
     <state x="499" y="174" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1583318630881" />
     <state x="499" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864/-1440.0.1440.900@0.0.1536.864" timestamp="1581677948044" />
-    <state x="207" y="8" key="CommitChangelistDialog2" timestamp="1583474537914">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="207" y="8" key="CommitChangelistDialog2" timestamp="1584972287138">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="-1246" y="8" key="CommitChangelistDialog2/-1440.0.1440.850/0.0.1536.824@-1440.0.1440.850" timestamp="1583394410396" />
     <state x="207" y="8" key="CommitChangelistDialog2/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1583474537914" />
+    <state x="207" y="8" key="CommitChangelistDialog2/-1440.0.1440.900/0.0.1536.864@0.0.1536.864" timestamp="1584972287138" />
     <state x="207" y="8" key="CommitChangelistDialog2/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582295290339" />
     <state x="207" y="48" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1578467507346" />
     <state x="0" y="97" key="DiffContextDialog" timestamp="1578467506515">
@@ -496,11 +504,12 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1583237811821" />
-    <state x="267" y="173" key="Vcs.Push.Dialog.v2" timestamp="1583474544285">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="267" y="181" key="Vcs.Push.Dialog.v2" timestamp="1584972302171">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="-1190" y="178" key="Vcs.Push.Dialog.v2/-1440.0.1440.850/0.0.1536.824@-1440.0.1440.850" timestamp="1583391132075" />
     <state x="267" y="173" key="Vcs.Push.Dialog.v2/-1440.0.1440.850/0.0.1536.824@0.0.1536.824" timestamp="1583474544285" />
+    <state x="267" y="181" key="Vcs.Push.Dialog.v2/-1440.0.1440.900/0.0.1536.864@0.0.1536.864" timestamp="1584972302171" />
     <state x="267" y="173" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1440.0.1440.860@0.0.1536.824" timestamp="1582295300067" />
     <state x="267" y="181" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1578467026125" />
     <state x="-1510" y="71" width="1260" height="810" maximized="true" key="dock-window-1" timestamp="1583316469956">
