@@ -10,7 +10,7 @@ from .jsmoney import charge
 
 # 剩余停车位
 from user.models import NumberCar, Car, CS
-from wx.models import Licenseplate
+from wx.models import Licenseplate, UserProfile
 
 
 def empty_car_num(request):
@@ -91,7 +91,9 @@ def payOrders(request):
             nowd = datetime.datetime.strptime(now, '%Y-%m-%d %H:%M:%S')
             stay_time = (nowd - car[0].in_date).total_seconds()
             stay_time = float(('%.2f' % (stay_time / 3600)))
+            print(stay_time)
             money = charge(stay_time)
+            print(money)
             stop_car.append(
                 {'id': car[0].id, 'plate': car[0].plate_number, 'time': car[0].in_date, 'enter': car[0].enter_info,
                  'money': money,
@@ -108,17 +110,19 @@ def isOutpark(request):
         data_obj = json.loads(data)
         car_id = data_obj.get('id')
         car = Car.objects.filter(id=car_id)
-        car1=car[0]
-        if car1.isout == 0:
+        car1 = car[0]
+        if car1.isout == '0':
             # 没有出场
             return JsonResponse({'code': 201})
-        elif car1.isout == 1:
+        elif car1.isout == '1':
             stay_date = float(car1.stay_date)
+            print(stay_date)
             money = charge(stay_date)
             print(money)
             now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             car.update(money=money)
             return JsonResponse({'code': 200, 'message': money})
+
 
 # 确认支付
 def pay(request):
@@ -128,7 +132,18 @@ def pay(request):
         data = request.body
         data_obj = json.loads(data)
         car_id = data_obj.get('id')
+        user_id = data_obj.get('user_id')
+
+        user = UserProfile.objects.filter(id=user_id)
         car = Car.objects.filter(id=car_id)
-        now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        car.update(out_date=now)
-        return JsonResponse({'code': 200})
+
+        if user[0].wallet >= car[0].money:
+            # car = Car.objects.filter(id=car_id)
+            money = user[0].wallet - car[0].money
+            user.update(wallet=money)
+            now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            car.update(out_date=now)
+            return JsonResponse({'code': 200})
+        elif user[0].wallet < car[0].money:
+            return JsonResponse({'code': 201})
+

@@ -1,5 +1,6 @@
 import datetime
 import json
+import re
 
 from django.conf import settings
 import requests
@@ -17,7 +18,6 @@ import hashlib
 
 dist1 = {}
 
-
 def register(request):
     if request.method == 'GET':
         return JsonResponse({'code': 200})
@@ -33,7 +33,7 @@ def register(request):
         username = json_obj.get('username')
         passwd = json_obj.get('passwd')
         passwd2 = json_obj.get('passwd2')
-        old_user = UserProfile.objects.filter(username=username)
+        old_user = UserProfile.objects.filter(usercount=username)
         if old_user:
             result = {'code': 10102, 'message': '用户名已存在'}
             return JsonResponse(result)
@@ -42,12 +42,11 @@ def register(request):
             return JsonResponse(result)
         m = hashlib.md5()
         m.update(passwd.encode())
-        # try:
-        #     user = UserProfile.objects.create(username=username, email=email, password=m.hexdigest())
-        # except Exception as e:
-        #     result = {'code': 10104, 'message': '用户名已存在'}
-        #     return JsonResponse(result)
-        # token = make_token(username)
+        try:
+            user = UserProfile.objects.create(usercount=username, email=email, password=m.hexdigest())
+        except Exception as e:
+            result = {'code': 10104, 'message': '用户名已存在'}
+            return JsonResponse(result)
         dist1['email'] = email
         dist1['username'] = username
         dist1['passwd'] = passwd
@@ -93,12 +92,48 @@ def Wxlogin(request):
         if old_user:
             user = old_user[0]
             token = make_token(user.id)
-            return JsonResponse({'code': 200, 'message': '登录成功', 'token': token.decode(), 'id': user.id})
+            return JsonResponse({'code': 200, 'message': '登录成功', 'token': token.decode(), 'id': old_user[0].id,'openid':user.openid})
         else:
             user = UserProfile.objects.create(openid=openid, nickname=nickname)
             token = make_token(user.id)
-            return JsonResponse({'code': 200, 'message': '登录成功', 'token': token.decode(), 'id': old_user.id})
+            return JsonResponse({'code': 200, 'message': '登录成功', 'token': token.decode(), 'id': user.id,'openid':user.openid})
 
+def Bindwx(request):
+    if request.method == 'GET':
+        return JsonResponse({'code': 'bindwx'})
+    if request.method == 'POST':
+        data = request.body
+        data_obj = json.loads(data)
+        openid = data_obj.get('openid')
+        nickname = data_obj.get('nickname')
+        id=data_obj.get('id')
+        user=UserProfile.objects.filter(id=id)
+        if user:
+            user.update(nickname=nickname,openid=openid)
+            return JsonResponse({'code': 200, 'openid': user[0].openid})
+        else:
+            return JsonResponse({'code': 201, 'message': '绑定失败'})
+# 绑定账号
+def Bindcount(request):
+    if request.method == 'GET':
+        return JsonResponse({'code': 'bindwx'})
+    if request.method == 'POST':
+        data = request.body
+        json_obj = json.loads(data)
+        username = json_obj.get('username')
+        password = json_obj.get('passwd')
+        id=json_obj.get('id')
+        user = UserProfile.objects.filter(usercount=username)
+        if user:
+            return JsonResponse({'code':'201',})
+
+        import hashlib
+        m = hashlib.md5()
+        m.update(password.encode())
+        user_old = UserProfile.objects.filter(id=id)
+        user_old.update(password=m.hexdigest(),usercount=username)
+        result = {'code': '200'}
+        return JsonResponse(result)
 
 def reid(request):
     if request.method == 'GET':
@@ -207,10 +242,13 @@ def bindEmail(request):
         data_obj = json.loads(data)
         id = data_obj.get('user_id')
         email = data_obj.get('email')
+        if not re.match(r'^[0-9a-zA-Z_]{0,19}@[0-9a-zA-Z]{1,13}\.[com,cn,net]{1,3}$',email):
+            return JsonResponse({'code': 102, 'message': '请输入正确的邮箱格式'})
         user = UserProfile.objects.filter(id=id)
         old_user = user[0]
         if old_user.email:
-            return JsonResponse({'code': 101, 'message': '此账号已绑定邮箱'})
+            user.update(email=email)
+            return JsonResponse({'code': 200, 'message': '邮箱更改成功'})
         else:
             user.update(email=email)
             return JsonResponse({'code': 200, 'message': '绑定成功'})
@@ -228,7 +266,6 @@ def submitSuggest(request):
         id = data_obj.get('id')
         Suggestions.objects.create(suggest=suggest, user_id=id)
         return JsonResponse({'code': 200})
-
 
 # 查看历史停车记录
 def History(request):
@@ -255,6 +292,48 @@ def History(request):
             return JsonResponse({'code':200,'history':history_car})
         else:
             return JsonResponse({'code':201})
+#钱包功能
+def Walletm(request):
+    if request.method == 'GET':
+        return JsonResponse({'code': 'wallet'})
+    if request.method == 'POST':
+        data = request.body
+        print(data)
+        data_obj = json.loads(data)
+        id = data_obj.get('id')
+        print(id)
+        user=UserProfile.objects.filter(id=id)
+        if user:
+            money=user[0].wallet
+            print(money)
+            return JsonResponse({'code': 200, 'message': money})
+        return JsonResponse({'code':'201','message':'error'})
 
+#余额充值
+import decimal
+def Recharge(request):
+    if request.method == 'GET':
+        return JsonResponse({'code': 'wallet'})
+    if request.method == 'POST':
+        data = request.body
+        print(data)
+        data_obj = json.loads(data)
+        id = data_obj.get('id')
+        my=data_obj.get('money')
+        print(my)
+        my=decimal.Decimal(my)
+        print(type(my))
+        print(id)
+        user = UserProfile.objects.filter(id=id)
+        if user:
+            money = user[0].wallet
+            money+=my
+            user.update(wallet=money)
+            return JsonResponse({'code': 200, 'message': money})
+        return JsonResponse({'code': '201', 'message': 'error'})
+
+
+
+        
 
 

@@ -48,12 +48,13 @@ while True:
             if plate_length==8:
                 car_type='新能源'
             now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            sql = "insert into park_car_info (plate_number,in_date,car_type,enter_info) values(%s,%s,%s,%s) "
+            sql = "insert into park_car_info (plate_number,in_date,car_type,enter_info,isout) values(%s,%s,%s,%s,%s) "
             try:
-                cur.execute(sql, [plate, now, car_type, '1'])
+                cur.execute(sql, [plate, now, car_type, '1','0'])
                 db.commit()
-            except:
-                db.rollback()
+            except Exception as e:
+                print(e)
+                # db.rollback()
             sql = "select user_id from license_info where license='%s';" % plate
             cur.execute(sql)
             user = cur.fetchone()

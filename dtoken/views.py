@@ -25,7 +25,7 @@ def tokens(request):
     # TODO 检查参数是否存在
 
     # 查询用户
-    user = UserProfile.objects.filter(username=username)
+    user = UserProfile.objects.filter(usercount=username)
     if not user:
         result = {'code': 10202, 'error': 'username or password is wrong'}
         return JsonResponse(result)
@@ -38,8 +38,12 @@ def tokens(request):
         result = {'code': 10203, 'error': 'username or password is wrong'}
         return JsonResponse(result)
     # 生成token
+
     token = make_token(user.id)
-    result = {'code': '200', 'id': user.id, 'token': token.decode()}
+    if user.openid:
+        result = {'code': '200', 'id': user.id, 'token': token.decode(),'openid':user.openid}
+    else:
+        result = {'code': '200', 'id': user.id, 'token': token.decode()}
     return JsonResponse(result)
 
 

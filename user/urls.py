@@ -27,6 +27,10 @@ urlpatterns = [
     url(r'^deluser',views.DeleteUser,name='deluser'),
     #收费记录http://127.0.0.1:8000/user/chargeRecord
     url(r'^chargeRecord',views.record,name='chargeRecord'),
+    #欠费记录http://127.0.0.1:8000/user/qianfei
+    url(r'^qianfei',views.Qianfei,name='qianfei'),
+    #邮件提醒http://127.0.0.1:8000/user/Emailremind
+    url(r'^emailremind',views.Emailremind,name='emailremind'),
 
 
 

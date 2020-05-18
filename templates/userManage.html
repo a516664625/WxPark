@@ -90,6 +90,8 @@
 
                 <li><a class="treeview-item active" href="chargeRecord"><i
                         class="app-menu__icon fa fa-circle-o"></i>查看收费记录</a></li>
+                <li><a class="treeview-item active" href="qianfei"><i
+                        class="app-menu__icon fa fa-circle-o"></i>查看未交费人员</a></li>
             </ul>
         </li>
         <li><a class="app-menu__item active" href="userManage"><i
@@ -133,7 +135,7 @@
                             </th>
                             <th>序号</th>
                             <th>用户名</th>
-                            <th>性别</th>
+                            <th>账户</th>
                             <th>电子邮箱</th>
                             <th>创建时间</th>
 
@@ -146,8 +148,8 @@
                                     <input type="checkbox" name="checkboxlist" value="{{ i.id }}"/>
                                 </td>
                                 <td>{{ forloop.counter }}</td>
-                                <td>{{ i.username }}</td>
-                                <td>{{ i.sex }}</td>
+                                <td>{{ i.nickname }}</td>
+                                <td>{{ i.usercount }}</td>
                                 <td>{{ i.email }}</td>
                                 <td>{{ i.created_time }}</td>
                             </tr>
