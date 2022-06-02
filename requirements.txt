@@ -9,7 +9,7 @@ decorator==4.4.1
 Django==1.11.8
 enum34==1.1.9
 h5py==2.10.0
-html5lib==0.9999999
+html5lib==0.99999999
 idna==2.8
 imageio==2.8.0
 jwt==0.6.1
